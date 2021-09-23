@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route,
     Link
@@ -22,7 +22,7 @@ class Navigation extends React.Component {
     }
     render() {
         return (
-            <Router>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
 
                 {/*A <Switch> looks through all its children <Route>lements and renders the first one whose pathmatches the current URL. Use a <Switch> any time you have multiple routes, but you want only one of them to render at a time */}
                 <div className="daily">
@@ -86,7 +86,7 @@ class Navigation extends React.Component {
                     </ol> */}
 
                 </aside>
-            </Router>
+            </BrowserRouter>
         );
     }
 }
